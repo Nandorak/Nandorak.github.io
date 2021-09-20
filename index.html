@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio - Fernando Rakovsky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Note: Try to remove the following lines to see the effect of CSS positioning */
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .affix+.container-fluid {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="container-fluid" style="height:200px;">
+        <h1>Hola, soy Fernando</h1>
+        <h4>Soy un estudiante de ingeniería en informática, amante de la tecnología y fiel a android.</h4>
+        <p>Aquí podras conocer un poco sobre mí y los proyectos en los que he trabajado de forma individual o colaborativa. Te invito a conocerme.</p>
+    </header>
+
+    <div id="nav-placeholder"> </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>$.get("componentes/nav-bar.html", function (data) {
+    $("#nav-placeholder").replaceWith(data);
+    });</script>
+
+    <div class="container-fluid" style="background-color: white; width: 90%; margin-top: 0;">
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+    </div>
+    
+    <footer>
+        <div id="footer"> </div>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script>$.get("componentes/footer.html", function (data) {
+        $("#footer").replaceWith(data);
+        });</script>
+    </footer>
+
+</body>
+
+
+</html>

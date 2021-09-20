@@ -1,0 +1,15 @@
+body {
+	background-color: gray;
+}
+header {
+	background: linear-gradient(top, black, gray);
+	background: -webkit-linear-gradient(top, black, gray);
+	background: -moz-linear-gradient(top, black, gray);
+	background: -o-linear-gradient(top, black, gray);
+	background: -ms-linear-gradient(top, black, gray);
+	color: aliceblue;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
