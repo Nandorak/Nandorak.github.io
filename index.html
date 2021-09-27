@@ -5,6 +5,43 @@
     <title>Portfolio - Fernando Rakovsky</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row::after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+        
+        [class*="col-"] {
+          float: left;
+          padding: 15px;
+        }  
+        
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        
+        @media only screen and (max-width: 768px) {
+          /* For mobile phones: */
+          [class*="col-"] {
+            width: 100%;
+          }
+        }
+        </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -38,33 +75,31 @@
     });</script>
 
     <div class="container-fluid" style="background-color: white; width: 90%; margin-top: 0;">
-        <h1>Proyectos recientes</h1>        
-        <table id="tableProyectos" class="table">
-            <tr>
-                <td class="tdProyectos">
-                    <div class="caja">
-                        <a href="post/proyecto-1/Advertising.html">
-                            <strong>Advertising (Parte 1)</strong>
-                            <div><img src="post/proyecto-1/imgProyecto1.png"></div>
-                        </a>
-                            <div>A través de rStudio se realizará una regresion lineal simple para predecir las ventas en base a diferentes opciones de publicidad.</div>
-                        </div>
-                </td>
-                <td class="tdProyectos">Próximamente</td>
-                <td class="tdProyectos">Próximamente</td>
-            </tr>
-        </table>
-        <h1>Últimas entradas del blog</h1>        
-        <table id="tableProyectos" class="table">
-            <tr>
-                <td>Próximamente</td>
-                <td>Próximanete</td>
-                <td>Próximamente</td>
-            </tr>
-        </table>
-          
-    </div>
-    
+        <h1>Proyectos recientes</h1>
+        <div class="row" style="text-align: center;">
+            <div class="col-4 left" style="text-align: center;">
+                <div style="width: 100%; background-color: #d7d7d7; border-radius: 15px; height: 250px;">
+                <a href="post/proyecto-1/Advertising.html">
+                    <strong>Advertising (Parte 1)</strong>
+                    <div><img src="post/proyecto-1/imgProyecto1.png"></div>
+                </a>
+                    <div>A través de rStudio se realizará una regresion lineal simple para predecir las ventas en base a diferentes opciones de publicidad.</div>
+                </div>
+            </div>        
+          <div class="col-4" style="text-align: center;">
+            <div style="width: 100%; background-color: #d7d7d7; border-radius: 15px;"> 
+                Próximamente
+            </div>
+          </div>
+        <div class="col-4 right" style="text-align: center;">
+            <div class="aside">
+                <div style="width: 100%; background-color: #d7d7d7; border-radius: 15px;"> 
+                    Próximamente
+                </div>
+            </div>
+          </div>
+        </div>          
+    </div>    
     <footer>
         <div id="footer"> </div>
         <script src="//code.jquery.com/jquery.min.js"></script>
