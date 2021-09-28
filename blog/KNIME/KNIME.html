@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio - Fernando Rakovsky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../stylesPost.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        /* Note: Try to remove the following lines to see the effect of CSS positioning */
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .affix+.container-fluid {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluid" style="height:200px;">
+        <h1>Hola, soy Fernando</h1>
+        <h4>Soy un estudiante de ingeniería en informática, amante de la tecnología y fiel a android.</h4>
+        <p>Aquí podras conocer un poco sobre mí y los proyectos en los que he trabajado de forma individual o colaborativa. Te invito a conocerme.</p>
+    </header>
+
+    <div id="nav-placeholder"> </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>$.get("../../componentes/nav-bar.html", function (data) {
+    $("#nav-placeholder").replaceWith(data);
+    });</script>
+
+    <div class="container-fluid" style="background-color: white; width: 90%; margin-top: 0;">
+        <h1>Acercamiento a KNIME</h1>
+        <div style="margin: 15px;" class="addthis_inline_share_toolbox"></div>
+        <img src="images/image1.png" alt="KNIME" height="250px" style="display:block; margin: auto;">
+        <p>El workflow muestra una regresión simple para predecir un valor numérico de la variable objetivo. El conjunto de datos se divide en dos partes, el 80% para el training y el restante para el testing. Se entrena el modelo con el training y luego se le aplica este al testing. Finalmente se ve el resultado obtenido.</p>
+        <h2>Operador “File Reader”</h2>
+        <p>Al hacer doble clic sobre el operador me muestra los datos que tiene la tabla Iris. Este operador tiene muchas más opciones para la importación de datos que RapidMiner. Para seleccionar la variable para predecir se hace en el operador Simple Regression Tree Model. Para el caso del modelo predicará el ancho del pétalo.</p>
+        <h2>Operador “Partitioning”</h2>
+        <p>Este operador permite particionar el conjunto de datos. KNIME solo se puede hacerlo en 2 conjuntos a diferencia de Split Data de RapidMiner que puede hacerlo en más particiones. KNIME tiene la opción de persistir estos datos en el disco duro además de la caché de la memoria.</p>
+        <h2>Operador “Simple Regression Tree Learner”</h2>
+        <p>Soporta variables de predicción numérica. El procedimiento sigue el algoritmo descrito por "Árboles de clasificación y regresión" (Breiman et al, 1984). Aquí el valor predicho para un nodo hoja es el valor objetivo medio de los registros dentro de la hoja.
+            Los parámetros que permite configurar son:</p>
+        <ul>
+            <li>La variable a predecir (Target Column)</li>
+            <li>Permite seleccionar qué columnas se podrán usar para la predicción.</li>
+            <li>Incorpora 2 algoritmos para el tratamiento de los valores perdidos.</li>
+            <li>Al igual que en RapidMiner se le puede configurar la profundidad y el tamaño mínimo del nodo.</li>
+        </ul>
+        <h2>Operador “Simple Regresión Tree Predictor”</h2>
+        <p>Este operador tiene dos entradas, los datos que sirvieron para el entrenamiento en en operador “Simple Regression Tree Learner” y el conjunto de datos sobre el que se testeara el modelo.
+            La salida de este operador es la predicción realizada.</p>
+        <h2>Operador “Line Plot”</h2>
+        <img src="images/image2.png" alt="KNIME" height="400px" style="display:block; margin: auto;">
+        <p>Aquí se puede ver el resultado obtenido de la predicción comparado con los valores verdaderos.</p>
+        <h2>Operador “Numeric Scorer”</h2>
+        <img src="images/image3.png" alt="KNIME" style="display:block; margin: auto;">
+        <p>Este operador brinda información detallada de las estadísticas obtenidas del modelo. Un R2 muy cercano a uno quiere decir que el modelo funciona muy bien.</p>
+    </div>
+
+    <div id="footer"> </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>$.get("../../componentes/footer.html", function (data) {
+    $("#footer").replaceWith(data);
+    });</script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-614b89a2ba0af053"></script>
+
+</body>
+
+
+</html>
